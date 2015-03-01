@@ -51,12 +51,16 @@ class ImageTransition: BaseTransition {
 		
 		println("dismissing segue")
 
+		// 24. cast the two view controllers we want to access. here we switch the fromViewController to be the detail view "AnimalViewController" and the toViewController to be the destination view "farmViewController"
+		
 		var animalViewController = fromViewController as AnimalViewController
 		var farmViewController = toViewController as FarmViewController
 
+		// 25. hide the big image
 		animalViewController.imageView.hidden = true
+
 		
-		
+		// 26. create a copy called "movingImageView" and set all the properties to be the same as the big image
 		var movingImageView = UIImageView()
 		movingImageView.image = animalViewController.imageView.image
 		movingImageView.frame = animalViewController.imageView.frame
@@ -64,7 +68,7 @@ class ImageTransition: BaseTransition {
 		movingImageView.contentMode = animalViewController.imageView.contentMode
 		containerView.addSubview(movingImageView)
 
-		
+		// 27. animate the moving image's frame to be the same as the selected image frame
 		fromViewController.view.alpha = 1
 		UIView.animateWithDuration(duration, animations: {
 			println("animating")
