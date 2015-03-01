@@ -15,6 +15,8 @@
 		195BEABD1AA2F4D600E2E831 /* Image_TransitionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195BEABC1AA2F4D600E2E831 /* Image_TransitionsTests.swift */; };
 		195BEAC71AA2F5E900E2E831 /* FarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195BEAC61AA2F5E900E2E831 /* FarmViewController.swift */; };
 		195BEAC91AA2F6AA00E2E831 /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195BEAC81AA2F6AA00E2E831 /* AnimalViewController.swift */; };
+		195BEACF1AA3038700E2E831 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195BEACE1AA3038700E2E831 /* BaseTransition.swift */; };
+		195BEAD11AA3039000E2E831 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195BEAD01AA3039000E2E831 /* FadeTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		195BEABC1AA2F4D600E2E831 /* Image_TransitionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image_TransitionsTests.swift; sourceTree = "<group>"; };
 		195BEAC61AA2F5E900E2E831 /* FarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarmViewController.swift; sourceTree = "<group>"; };
 		195BEAC81AA2F6AA00E2E831 /* AnimalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
+		195BEACE1AA3038700E2E831 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		195BEAD01AA3039000E2E831 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		195BEAA31AA2F4D600E2E831 /* Image Transitions */ = {
 			isa = PBXGroup;
 			children = (
+				195BEAD21AA303A200E2E831 /* Transitions */,
 				195BEAA61AA2F4D600E2E831 /* AppDelegate.swift */,
 				195BEAA81AA2F4D600E2E831 /* ViewController.swift */,
 				195BEAAA1AA2F4D600E2E831 /* Main.storyboard */,
@@ -116,6 +121,15 @@
 				195BEABB1AA2F4D600E2E831 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		195BEAD21AA303A200E2E831 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				195BEACE1AA3038700E2E831 /* BaseTransition.swift */,
+				195BEAD01AA3039000E2E831 /* FadeTransition.swift */,
+			);
+			name = Transitions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +233,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				195BEAA91AA2F4D600E2E831 /* ViewController.swift in Sources */,
+				195BEACF1AA3038700E2E831 /* BaseTransition.swift in Sources */,
 				195BEAA71AA2F4D600E2E831 /* AppDelegate.swift in Sources */,
 				195BEAC91AA2F6AA00E2E831 /* AnimalViewController.swift in Sources */,
+				195BEAD11AA3039000E2E831 /* FadeTransition.swift in Sources */,
 				195BEAC71AA2F5E900E2E831 /* FarmViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
