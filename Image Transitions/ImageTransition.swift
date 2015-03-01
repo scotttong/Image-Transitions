@@ -40,17 +40,40 @@ class ImageTransition: BaseTransition {
 			toViewController.view.alpha = 1
 			}) { (finished: Bool) -> Void in
 				self.finish()
+				
+				// 23. show the REAL imageView on the destinationViewController called "animalViewController", and remove the temporary copy of the image "movingImageView"
+				animalViewController.imageView.hidden = false
+				movingImageView.removeFromSuperview()
 		}
 	}
 	
 	override func dismissTransition(containerView: UIView, fromViewController: UIViewController, toViewController: UIViewController) {
 		
+		println("dismissing segue")
+
+		var animalViewController = fromViewController as AnimalViewController
+		var farmViewController = toViewController as FarmViewController
+
+		animalViewController.imageView.hidden = true
+		
+		
+		var movingImageView = UIImageView()
+		movingImageView.image = animalViewController.imageView.image
+		movingImageView.frame = animalViewController.imageView.frame
+		movingImageView.clipsToBounds = animalViewController.imageView.clipsToBounds
+		movingImageView.contentMode = animalViewController.imageView.contentMode
+		containerView.addSubview(movingImageView)
+
+		
 		fromViewController.view.alpha = 1
 		UIView.animateWithDuration(duration, animations: {
-			
+			println("animating")
+			movingImageView.frame = farmViewController.selectedImageView.frame
 			fromViewController.view.alpha = 0
 			}) { (finished: Bool) -> Void in
 				self.finish()
+				farmViewController.selectedImageView.hidden = false
+				movingImageView.removeFromSuperview()
 		}
 	}
 

@@ -88,7 +88,7 @@ class FarmViewController: UIViewController {
 		
 		// 19. take over the standard transition with an image transition. step 20 is back in the ImageTransition.swift file
 		imageTransition = ImageTransition()
-		imageTransition.duration = 3
+		imageTransition.duration = 0.4
 		destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
 		destinationViewController.transitioningDelegate = imageTransition
 		
