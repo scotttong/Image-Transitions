@@ -17,8 +17,11 @@ class FarmViewController: UIViewController {
 	// 8. set a class variable to capture the image that was tapped on
 	var selectedImageView: UIImageView!
 	
-	// 12. create a new variable that holds the special transition
+	// 12. create a new variable that holds the special transition "FadeTransition"
 	var fadeTransition: FadeTransition!
+	
+	// 18. create a new variable that holds the special transition "ImageTransition"
+	var imageTransition: ImageTransition!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,12 +78,22 @@ class FarmViewController: UIViewController {
 		// 11. next, we need to add .swift files created by Tim called "BaseTransition.swift" and "FadeTransition.swift" to our XCode project to help us with animating the transition. Step 12 is above near the outlets.
 		
 		// 13. this is where we take over the standard transition (initialize the transition, set the presentation style to custom, and set the delegate to this new instance of the fade transition. I'm going to comment this out because we want to do a more complicated transition.
-		
+		/*
 		fadeTransition = FadeTransition()
 		destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
 		destinationViewController.transitioningDelegate = fadeTransition
+		*/
+		
+		// 14. Now we want to create a more complicated transition where we move and scale the thumbnail image to a bigger size on the destination view controller. Create a new .swift file called "ImageTransition" and copy the code from Fade transition into it. Step 15 is inside ImageTransition.swift
+		
+		// 19. take over the standard transition with an image transition. step 20 is back in the ImageTransition.swift file
+		imageTransition = ImageTransition()
+		imageTransition.duration = 3
+		destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+		destinationViewController.transitioningDelegate = imageTransition
 		
 		
+
 		
 		
 		// Get the new view controller using segue.destinationViewController.

@@ -17,6 +17,7 @@
 		195BEAC91AA2F6AA00E2E831 /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195BEAC81AA2F6AA00E2E831 /* AnimalViewController.swift */; };
 		195BEACF1AA3038700E2E831 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195BEACE1AA3038700E2E831 /* BaseTransition.swift */; };
 		195BEAD11AA3039000E2E831 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195BEAD01AA3039000E2E831 /* FadeTransition.swift */; };
+		195BEAD41AA307D400E2E831 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195BEAD31AA307D400E2E831 /* ImageTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		195BEAC81AA2F6AA00E2E831 /* AnimalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
 		195BEACE1AA3038700E2E831 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		195BEAD01AA3039000E2E831 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		195BEAD31AA307D400E2E831 /* ImageTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			children = (
 				195BEACE1AA3038700E2E831 /* BaseTransition.swift */,
 				195BEAD01AA3039000E2E831 /* FadeTransition.swift */,
+				195BEAD31AA307D400E2E831 /* ImageTransition.swift */,
 			);
 			name = Transitions;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				195BEAA91AA2F4D600E2E831 /* ViewController.swift in Sources */,
+				195BEAD41AA307D400E2E831 /* ImageTransition.swift in Sources */,
 				195BEACF1AA3038700E2E831 /* BaseTransition.swift in Sources */,
 				195BEAA71AA2F4D600E2E831 /* AppDelegate.swift in Sources */,
 				195BEAC91AA2F6AA00E2E831 /* AnimalViewController.swift in Sources */,
@@ -429,6 +433,7 @@
 				195BEAC21AA2F4D600E2E831 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		195BEAC31AA2F4D600E2E831 /* Build configuration list for PBXNativeTarget "Image TransitionsTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +442,7 @@
 				195BEAC51AA2F4D600E2E831 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
